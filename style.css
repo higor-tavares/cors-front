@@ -1,0 +1,23 @@
+#purchase {
+    width: 60vw;
+    margin: auto;
+    margin-top:10vh;
+    box-shadow: 2px 2px 8px #888;
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}
+#purchase input, #btn {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid #888;
+}
+#btn {
+    background-color: #22aa77;
+    color: white;
+    font-weight: bold;
+}

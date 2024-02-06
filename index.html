@@ -9,9 +9,14 @@
 <body>
     <noscript>You need to enable Javascript!</noscript>
     <form id="purchase" method="post" action="javascript:;">
-        <h2>Cadastro de produto</h2>
-        <input type="text" name="name" id="name" placeholder="Produto">
-        <input type="number" name="price" id="price" placeholder="Preço">
+        <h2>Cadastro de Receita/Despesa</h2>
+        <input type="text" name="description" id="description" placeholder="Descrição">
+        <input type="text" name="username" id="username" placeholder="Usuário">
+        <select id="type">
+            <option value="revenue">Receita</option>
+            <option value="expense">Despesa</option>
+        </select>
+        <input type="number" name="amountInCents" id="amountInCents" placeholder="Valor em centavos">
         <button id="btn" type="submit" >Cadastrar</button>
     </form>
     <script src="script.js"></script>

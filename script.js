@@ -4,10 +4,20 @@ document.getElementById('purchase').addEventListener('submit', e => {
 });
 
 function savePurchase() {
-    var purchase = {
-        name: document.getElementById('name').value,
-        price: document.getElementById('price').value
+    var journalEntry = {
+        description: getField('description'),
+        type: getField('type'),
+        username: getField('username'),
+        amount: getField('amountInCents'),
     }
-    localStorage.setItem('purchase', JSON.stringify(purchase));
-    console.log('Purchase saved');
+    //this will result on CORS error because the server does not return allow origin header
+    fetch('http://localhost:5000', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(journalEntry)
+    })
 }
+
+const getField = (fieldName) => document.getElementById(fieldName).value;
